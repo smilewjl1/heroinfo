@@ -1,0 +1,28 @@
+<!--pages/02/02.wxml-->
+<!-- 大图 -->
+<image class="skin" src="{{heroInfo.bgs[index]}}"></image>
+<view class="skin-box">
+  <!-- 循环生成缩略图 -->
+  <image data-index='{{index}}' bindtap='changeSkin' wx:for="{{heroInfo.bgs_thumbnail}}" src="{{item}}"></image>
+</view>
+<!-- 英雄具体数值 -->
+<view class="info-box">
+  <view class="left">
+    <text class="name">{{heroInfo.name}}</text>
+    <text class="title">{{heroInfo.title}}</text>
+    <view class="tag-box">
+      <text wx:for="{{heroInfo.tags}}">{{item}}</text>
+    </view>
+    <text class="pro-title">生存能力</text>
+    <progress color="#35CF7A" stroke-width="20" percent='{{heroInfo.Ability.life}}'></progress>
+    <text class="pro-title">物理攻击</text>
+    <progress color="#F3CB1A" stroke-width="20" percent='{{heroInfo.Ability.physical}}'></progress>
+    <text class="pro-title">魔法攻击</text>
+    <progress color="#F6A71A" stroke-width="20" percent='{{heroInfo.Ability.magic}}'></progress>
+    <text class="pro-title">操作难度</text>
+    <progress color="#D098FF" stroke-width="20" percent='{{heroInfo.Ability.difficulty}}'></progress>
+  </view>
+  <view class="right">
+    {{heroInfo.story}}
+  </view>
+</view>

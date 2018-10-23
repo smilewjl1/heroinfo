@@ -1,0 +1,68 @@
+/* pages/02/02.wxss */
+page{
+  background-color: white;
+}
+/* 大的图片 */
+.skin{
+  width: 100%;
+}
+/* 缩略图列表 */
+.skin-box{
+  display: flex;
+  flex-wrap: wrap;
+  transform: translateY(-65px);
+}
+.skin-box image{
+  width:50px;
+  height: 50px;
+  margin: 5px;
+  box-shadow: 0 0 10px yellowgreen;
+}
+/* 详情布局 */
+.info-box{
+  display: flex;
+  transform: translateY(-60px);
+}
+.info-box .left{
+  width:150px;
+  background-color: skyblue;
+  padding: 0 5px;
+}
+.info-box .left>text{
+  color: white;
+  display: block;
+  padding-top: 5px;
+}
+.info-box .left>text.name{
+  color:yellowgreen;
+  font-weight: 700;
+  font-size:14px;  
+}
+.info-box .left>text.title{
+  font-size:26px;
+  font-weight: 700;
+  color:hotpink; 
+}
+.info-box .left>text.pro-title{
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.info-box .left> progress{
+  height: 20px;
+}
+.info-box .left> .tag-box>text{
+  color:white;
+  font-weight: 700;
+  font-size:14px;
+  background-color: #72B4FA;
+  padding: 3px 1px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.info-box .right{
+  flex:1;
+  color:white;
+  background-color: yellowgreen;
+  padding: 10px;
+}
